@@ -1,0 +1,610 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-blue: #6cd2fe;
+  --color-light-blue: #6cd2fe;
+  --color-gray: rgb(175, 165, 165);
+  --color-white: #fff1f1;
+  --about-color-black: #382f2f;
+  --section-color-white: #fff1f1;
+  --section-color-black: #382f2f;
+  --color-black: #382f2f;
+  --color-black-footer: #2d2929;
+  --main-font: "Poppins", sans-serif;
+  --font: "Open Sans", sans-serif;
+}
+
+/* Night Mode */
+body.night-mode {
+  --color-blue: #2d2929;
+  --color-light-blue: #6cd2fe;
+  --color-gray: rgb(175, 165, 165);
+  --color-white: #fff1f1;
+  --about-color-black: #382f2f;
+  --section-color-white: #362f2f;
+  --section-color-black: #fff1f1;
+  --color-black: #6cd2fe;
+  --main-font: "Poppins", sans-serif;
+  --font: "Open Sans", sans-serif;
+}
+
+body {
+  font-family: var(--main-font);
+}
+body input,
+body textarea {
+  font-size: 17px;
+}
+
+.container {
+  position: relative;
+}
+
+header nav {
+  display: flex;
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  background-color: var(--color-blue);
+  box-shadow: 0px 1px 8px -5px #382f2f;
+}
+header nav .nav_wrapper {
+  z-index: 2;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding: 0 1em;
+  height: 4rem;
+}
+header nav .nav_wrapper a {
+  color: var(--color-black);
+  text-decoration: none;
+}
+header nav .nav_wrapper .logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+header nav .nav_wrapper .logo h1 {
+  font-size: 2.5rem;
+}
+header nav .nav_wrapper .logo .socmed-icons {
+  display: flex;
+  gap: 0.4rem;
+}
+header nav .nav_wrapper .logo .socmed-icons i {
+  font-size: 1.7rem;
+}
+header nav .nav_wrapper .logo .socmed-icons i:hover {
+  color: var(--color-white);
+}
+header nav .nav_wrapper .nav_btns {
+  display: none;
+  background-color: var(--color-blue);
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  top: 3rem;
+  left: 0;
+  gap: 0.8rem;
+  padding: 0.8rem 0;
+}
+header nav .nav_wrapper .nav_btns a {
+  height: 100%;
+  align-items: center;
+  display: flex;
+  border-bottom: 3px solid var(--color-blue);
+}
+header nav .nav_wrapper .nav_btns a:hover {
+  border-bottom: 3px solid var(--color-white);
+  color: var(--color-white);
+}
+header nav .nav_wrapper .nav_btns .nav_register-btn {
+  display: flex;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  font-weight: 600;
+  padding: 0.3em 0.5em;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+header nav .nav_wrapper .nav_btns .nav_register-btn:hover {
+  background-color: var(--color-white);
+  color: var(--color-blue);
+}
+header nav .nav_wrapper .nav_btns.active {
+  display: flex;
+}
+header nav .nav_wrapper #night-mode-toggle {
+  display: flex;
+  margin-left: auto;
+  color: var(--color-black);
+  height: 100%;
+  align-items: center;
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+header nav .nav_wrapper #night-mode-toggle:hover {
+  color: var(--color-white);
+}
+header nav .nav_wrapper .burger {
+  color: var(--color-black);
+  font-size: 2rem;
+  margin-left: 0.7rem;
+}
+header nav .nav_wrapper .burger:hover {
+  color: var(--color-white);
+}
+
+.section-bball-video {
+  height: 100vh;
+  position: relative;
+}
+.section-bball-video video {
+  width: 100%;
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+}
+.section-bball-video .hero-container {
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.section-bball-video .hero-container .hero_text {
+  margin: 0 auto;
+  text-align: center;
+}
+.section-bball-video .hero-container .hero_text h1 {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--color-white);
+  font-weight: 500;
+}
+
+.learn {
+  margin-top: -8px;
+  padding: 5rem 1rem 5rem 1rem;
+  background-color: var(--section-color-white);
+}
+.learn .learn_wrapper {
+  margin: 0 auto;
+}
+.learn .learn_wrapper h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--color-black);
+}
+.learn .learn_wrapper .learn_title {
+  margin-bottom: 1rem;
+  color: var(--color-black);
+}
+.learn .learn_wrapper .learnings {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-direction: column;
+}
+.learn .learn_wrapper .learnings .learned {
+  background-color: var(--color-light-blue);
+  width: 100%;
+  color: #382f2f;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.learn .learn_wrapper .learnings .learned h3 {
+  text-align: center;
+}
+
+.container {
+  position: relative;
+}
+.container input,
+.container textarea,
+.container select {
+  background-color: rgba(255, 255, 255, 0.851);
+  border: none;
+}
+.container .bg-img {
+  width: 100%;
+  height: 1206px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  z-index: -1;
+  filter: brightness(70%);
+}
+.container .form-container {
+  padding: 8rem 1rem;
+}
+.container .form-container .form {
+  top: 100px;
+  max-width: 966px;
+  color: rgb(30, 22, 22);
+  background-color: rgba(255, 255, 255, 0.568627451);
+  border-radius: 36px;
+  margin: 0 auto;
+  padding: 1.6rem;
+}
+.container .form-container .form h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.container .form-container .form .form_first-inputs {
+  margin: 0 auto;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.container .form-container .form .form_first-inputs .input {
+  width: calc((100% - 16px) / 2);
+}
+.container .form-container .form .form_first-inputs .input label {
+  font-weight: 600;
+}
+.container .form-container .form .form_first-inputs .input input,
+.container .form-container .form .form_first-inputs .input select {
+  width: 100%;
+  padding: 0 0.5rem;
+  height: 10rem;
+  height: 2.4rem;
+  font-size: 17px;
+}
+.container .form-container .form .form_position {
+  margin: 1.5rem 0;
+}
+.container .form-container .form .form_position p {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.container .form-container .form .form_position .radio-btns {
+  display: flex;
+  justify-content: space-evenly;
+}
+.container .form-container .form .form_position .radio-btns .radio {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.container .form-container .form .form_position .radio-btns .radio input {
+  height: 1rem;
+  width: 1rem;
+}
+.container .form-container .form .form_emergency-contact {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.container .form-container .form .form_emergency-contact .input {
+  width: calc((100% - 16px) / 2);
+}
+.container .form-container .form .form_emergency-contact .input label {
+  font-weight: 600;
+}
+.container .form-container .form .form_emergency-contact .input input {
+  width: 100%;
+  padding: 0 0.5rem;
+  height: 2.4rem;
+  font-size: 17px;
+}
+.container .form-container .form .form_emergency-contact .input-- {
+  width: 100%;
+}
+.container .form-container .form .form_emergency-contact .input-- label {
+  font-weight: 600;
+}
+.container .form-container .form .form_emergency-contact .input-- textarea {
+  width: 100%;
+  padding: 0.5rem 1rem;
+}
+.container .form-container .form .form_read {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.container .form-container .form .form_read input {
+  width: 1rem;
+  height: 1rem;
+}
+.container .form-container .form button {
+  background-color: var(--color-blue);
+  cursor: pointer;
+  color: var(--color-white);
+  padding: 0.5rem 2rem;
+  width: 50%;
+  margin: 0 auto;
+  display: block;
+  border: none;
+  margin-top: 1rem;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+footer {
+  background-color: var(--color-black-footer);
+  color: var(--color-white);
+  padding: 2rem 0;
+}
+footer .footer_wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+footer .footer_wrapper .logo {
+  font-size: 3rem;
+  font-weight: 800;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  color: var(--color-light-blue);
+}
+footer .footer_wrapper .footer-wrapper_stuffs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  width: 100%;
+}
+footer .footer_wrapper .footer-wrapper_stuffs h4 {
+  margin-bottom: 0.6rem;
+  color: var(--color-light-blue);
+}
+footer .footer_wrapper .footer-wrapper_stuffs .nav-btns {
+  display: flex;
+  flex-direction: column;
+}
+footer .footer_wrapper .footer-wrapper_stuffs .nav-btns a {
+  color: var(--color-white);
+  text-decoration: none;
+  margin-bottom: 0.16rem;
+}
+footer .footer_wrapper .footer-wrapper_stuffs .socmed i {
+  display: inline-block;
+  color: var(--color-white);
+  margin-right: 0.3rem;
+  font-size: 1.3rem;
+}
+footer .footer_wrapper .footer-wrapper_stuffs .socmed i:hover {
+  color: var(--color-light-blue);
+  transition: 0.2s ease-in-out;
+}
+footer .footer_wrapper .footer-wrapper_stuffs .footer-wrapper_form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+footer .footer_wrapper .footer-wrapper_stuffs .footer-wrapper_form input {
+  background-color: var(--color-white);
+}
+footer .footer_wrapper .footer-wrapper_stuffs .footer-wrapper_form input,
+footer .footer_wrapper .footer-wrapper_stuffs .footer-wrapper_form button {
+  border: none;
+  height: 2rem;
+  width: 100%;
+  padding: 0 1rem;
+  margin-bottom: 0.5rem;
+}
+footer .footer_wrapper .footer-wrapper_stuffs .footer-wrapper_form button {
+  background-color: var(--color-light-blue);
+  color: var(--color-black-footer);
+  font-weight: 700;
+  cursor: pointer;
+}
+footer .footer_wrapper .footer-wrapper_stuffs .footer-wrapper_form button:hover {
+  background-color: var(--color-white);
+  transition: 0.2s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+  .container .bg-img {
+    height: 1610px;
+  }
+  .container .form-container {
+    padding: 4rem 1rem;
+  }
+  .container .form-container .form {
+    padding: 1rem;
+  }
+  .container .form-container .form .form_first-inputs .input {
+    width: 100%;
+  }
+  .container .form-container .form .form_position .radio-btns {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .container .form-container .form .form_position .radio-btns .radio {
+    width: 33.3333333333%;
+  }
+  .container .form-container .form .form_emergency-contact {
+    flex-direction: column;
+  }
+  .container .form-container .form .form_emergency-contact .input {
+    width: 100%;
+  }
+  .container .form-container .form button {
+    background-color: var(--color-blue);
+    cursor: pointer;
+    color: var(--color-white);
+    padding: 0.5rem 2rem;
+    width: 50%;
+    margin: 0 auto;
+    display: block;
+    border: none;
+    margin-top: 1rem;
+    font-weight: 600;
+    font-size: 1.3rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 17px;
+  }
+  header nav {
+    display: flex;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+    background-color: var(--color-blue);
+  }
+  header nav .nav_wrapper {
+    z-index: 2;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    height: 4rem;
+  }
+  header nav .nav_wrapper a {
+    color: var(--color-black);
+    text-decoration: none;
+  }
+  header nav .nav_wrapper .logo h1 {
+    font-size: 2.5rem;
+  }
+  header nav .nav_wrapper .logo .socmed-icons i {
+    font-size: 1.7rem;
+  }
+  header nav .nav_wrapper .logo .socmed-icons i:hover {
+    color: var(--color-white);
+  }
+  header nav .nav_wrapper .nav_btns {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    width: -moz-fit-content;
+    width: fit-content;
+    justify-content: space-between;
+    padding: 0;
+    height: 100%;
+  }
+  header nav .nav_wrapper .nav_btns .nav_register-btn {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    font-weight: 600;
+    height: 2.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-left: 0;
+  }
+  header nav .nav_wrapper .nav_btns .nav_register-btn:hover {
+    background-color: var(--color-white);
+    color: var(--color-blue);
+  }
+  header nav .nav_wrapper #night-mode-toggle {
+    margin-left: 0;
+    border-bottom: 3px solid var(--color-blue);
+  }
+  header nav .nav_wrapper #night-mode-toggle:hover {
+    border-bottom: 3px solid var(--color-white);
+    color: var(--color-white);
+  }
+  header nav .nav_wrapper .burger {
+    display: none;
+  }
+  header .bg-cp {
+    display: none;
+  }
+  header .header_statement {
+    max-width: 560px;
+  }
+  .learn {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .learn .learn_wrapper .learnings {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .learn .learn_wrapper .learnings .learned {
+    background-color: var(--color-light-blue);
+    width: calc((100% - 1rem) / 2);
+  }
+  footer .footer_wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  footer .footer_wrapper .footer-wrapper_stuffs {
+    justify-content: flex-end;
+  }
+  footer .footer_wrapper .footer-wrapper_stuffs .footer-wrapper_form {
+    display: flex;
+    flex-direction: column;
+    max-width: 230px;
+  }
+  footer .footer_wrapper .footer-wrapper_stuffs .footer-wrapper_form input {
+    background-color: var(--color-white);
+  }
+  footer .footer_wrapper .footer-wrapper_stuffs .footer-wrapper_form input,
+  footer .footer_wrapper .footer-wrapper_stuffs .footer-wrapper_form button {
+    border: none;
+    height: 2rem;
+    width: 100%;
+    padding: 0 1rem;
+    margin-bottom: 0.5rem;
+  }
+  footer .footer_wrapper .footer-wrapper_stuffs .footer-wrapper_form button {
+    background-color: var(--color-light-blue);
+    color: var(--color-black-footer);
+    font-weight: 700;
+    cursor: pointer;
+  }
+  footer .footer_wrapper .footer-wrapper_stuffs .footer-wrapper_form button:hover {
+    background-color: var(--color-white);
+    transition: 0.2s ease-in-out;
+  }
+}
+@media screen and (min-width: 1024px) {
+  html {
+    font-size: 18px;
+  }
+  header nav .nav_wrapper .nav_btns {
+    margin-left: auto;
+    margin-right: 1.5rem;
+  }
+  .learn .learn_wrapper {
+    max-width: 800px;
+  }
+  .learn .learn_wrapper .learnings {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .learn .learn_wrapper .learnings .learned {
+    background-color: var(--color-light-blue);
+    height: 93.2px;
+    width: calc((100% - 3rem) / 4);
+  }
+  .container .bg-img {
+    height: 1368px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  html {
+    font-size: 19px;
+  }
+  .container .bg-img {
+    height: 1568px;
+  }
+}/*# sourceMappingURL=style_sign-up.css.map */
