@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Activity 4 | Registration Page</title>
+    <link rel="stylesheet" href="styles/style_sign-up.css" />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- <img class="bg-img" src="images/bg-reg-page.jpg" alt="" /> -->
+    <header id="home">
+      <nav>
+        <div class="nav_wrapper">
+          <div class="logo">
+            <h1><a href="index.html#home">RF</a></h1>
+            <div class="socmed-icons">
+              <a href="https://www.facebook.com/R.Fidel28/" target="_blank">
+                <i class="fa-brands fa-square-facebook"></i>
+              </a>
+              <a href="https://www.instagram.com/revofidel/" target="_blank">
+                <i class="fa-brands fa-square-instagram"></i>
+              </a>
+            </div>
+          </div>
+          <div class="nav_btns" id="nav_btns">
+            <a href="index.html#home">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#hobbies">Hobbies</a>
+            <a href="index.html#favorites">Favorites</a>
+            <a href="index.html#skills">Skills</a>
+            <a href="https://fidelact5.netlify.app/" target="_blank">Act 5</a>
+            <a href="https://fidelact6.netlify.app/" target="_blank">Act 6</a>
+            <a class="nav_register-btn" href="sign-up.html">Register</a>
+          </div>
+
+          <i class="fa-solid fa-cloud-moon" id="night-mode-toggle"></i>
+          <i class="burger fa-solid fa-bars" id="burger"></i>
+        </div>
+      </nav>
+      <!-- <nav>
+        <div class="nav_wrapper">
+          <div class="logo">
+            <h1>RF</h1>
+            <div class="socmed-icons">
+              <a href="https://www.facebook.com/R.Fidel28/" target="_blank">
+                <i class="fa-brands fa-square-facebook"></i>
+              </a>
+              <a href="https://www.instagram.com/revofidel/" target="_blank">
+                <i class="fa-brands fa-square-instagram"></i>
+              </a>
+            </div>
+          </div>
+          <div class="nav_btns">
+            <a href="index.html#home">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#hobbies">Hobbies</a>
+            <a href="index.html#favorites">Favorites</a>
+            <a href="index.html#skills">Skills</a>
+          </div>
+          <a class="nav_register-btn" href="sign-up.html">Register</a>
+        </div>
+      </nav> -->
+    </header>
+
+    <section class="section-bball-video">
+      <video src="video/bball vid.mp4" autoplay loop></video>
+      <div class="hero-container">
+        <div class="hero_text">
+          <h1>
+            Champions are made when no one's watching. Keep grinding, keep
+            believing, and the game will reward you.
+          </h1>
+        </div>
+      </div>
+    </section>
+
+    <div class="learn">
+      <div class="learn_wrapper">
+        <h1>6 Weeks Basketball Training Program</h1>
+        <h3 class="learn_title">What you can learn:</h3>
+        <div class="learnings">
+          <div class="learned">
+            <h3>Shooting Form</h3>
+          </div>
+          <div class="learned">
+            <h3>Dribbling Form</h3>
+          </div>
+          <div class="learned">
+            <h3>Mentality</h3>
+          </div>
+          <div class="learned">
+            <h3>Strategy</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <img class="bg-img" src="images/bg-reg-page.jpg" alt="" />
+      <div class="form-container">
+        <div class="form">
+          <h1>Basketball Training Registration Form</h1>
+
+          <div class="form_first-inputs">
+            <div class="input">
+              <label for="fname">First name:</label>
+              <br />
+              <input type="text" placeholder="Juan" />
+            </div>
+            <div class="input">
+              <label for="lname">Last name:</label>
+              <br />
+              <input type="text" placeholder="Dela Cruz" />
+            </div>
+            <div class="input">
+              <label for="fname">Email:</label>
+              <br />
+              <input type="email" placeholder="JuanDelaCruz@gmail.com" />
+            </div>
+            <div class="input">
+              <label for="fname">Contact Number:</label>
+              <br />
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="0923-456-7890"
+                pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}"
+                required
+              />
+            </div>
+            <div class="input">
+              <label for="fname">Username:</label>
+              <br />
+              <input type="text" placeholder="Username" />
+            </div>
+            <div class="input">
+              <label for="fname">Password:</label>
+              <br />
+              <input type="password" placeholder="Password" />
+            </div>
+            <div class="input">
+              <label for="fname">Date Of Birth:</label>
+              <br />
+              <input type="date" placeholder="Date Of Birth" />
+            </div>
+            <div class="input">
+              <label for="fname">T-shirt Size</label>
+              <br />
+              <select name="" id="">
+                <option value="" selected>Select T-Shirt Size</option>
+                <option value="">X-Small</option>
+                <option value="">Small</option>
+                <option value="">Large</option>
+                <option value="">X-Large</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form_position">
+            <p>Preffered Position</p>
+            <div class="radio-btns">
+              <div class="radio">
+                <input type="radio" name="position" />
+                <label for="">Point Guard</label>
+              </div>
+              <div class="radio">
+                <input type="radio" name="position" />
+                <label for="">Guard</label>
+              </div>
+              <div class="radio">
+                <input type="radio" name="position" />
+                <label for="">Forwad</label>
+              </div>
+              <div class="radio">
+                <input type="radio" name="position" />
+                <label for="">Power Forward</label>
+              </div>
+              <div class="radio">
+                <input type="radio" name="position" />
+                <label for="">Center</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form_emergency-contact">
+            <div class="input">
+              <label for="">Person to contact</label>
+              <br />
+              <input type="text" placeholder="Juan Dela Cruz" />
+            </div>
+            <div class="input">
+              <label for="">Contact Number</label>
+              <br />
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="0923-456-7890"
+                pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}"
+                required
+              />
+            </div>
+            <div class="input--">
+              <label for="">State your medical conditions</label>
+              <br />
+              <textarea
+                id="message"
+                name="message"
+                rows="8"
+                cols=""
+                placeholder="Type your message here..."
+                required
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="form_read">
+            <input type="checkbox" />
+            <label for="">
+              I have read and agree to the terms and conditions of the basketall
+              program
+            </label>
+          </div>
+          <button type="submit">Submit</button>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="footer_wrapper">
+        <div class="logo">RF</div>
+        <div class="footer-wrapper_stuffs">
+          <div class="nav-btns">
+            <h4>Navigations</h4>
+            <a href="index.html#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#hobbies">Hobbies</a>
+            <a href="#favorites">Favorites</a>
+            <a href="#skills">Skills</a>
+          </div>
+          <div class="socmed">
+            <h4>Follow Me</h4>
+            <a href="https://www.facebook.com/R.Fidel28/" target="_blank">
+              <i class="fa-brands fa-square-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/revofidel/" target="_blank">
+              <i class="fa-brands fa-square-instagram"></i>
+            </a>
+          </div>
+          <div class="footer-wrapper_form">
+            <h4>Subscribe</h4>
+            <input type="text" placeholder="Name" />
+            <input type="email" placeholder="Email" />
+            <button>Submit</button>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
